@@ -18,7 +18,7 @@ namespace NotifierApp
             List<Notification> _notifications = dbHelper.GetAllRecords<Notification>(table);
 
             var startTimeSpan = TimeSpan.Zero;
-            var periodTimeSpan = TimeSpan.FromMinutes(0.2);
+            var periodTimeSpan = TimeSpan.FromMinutes(3);
             Timer t = new Timer(RnadomizeNotification, table, startTimeSpan, periodTimeSpan);
 
 
@@ -96,51 +96,5 @@ namespace NotifierApp
             Console.Out.WriteLine();
         }
 
-        private static void SeedData()
-        {
-            dbHelper.InsertRecord("notifications", new Notification
-            {
-                title = "Special Offer!!!",
-                description = "90%discount for 24 hours",
-                buttons = { "Take me there","Not now" }
-            });
-
-
-            dbHelper.InsertRecord("notifications", new Notification
-            {
-                title = "Special Offer 2!!!",
-                description = "10%discount for 24 hours",
-                buttons = { "Take me there","Maybe later" }
-            });
-
-            dbHelper.InsertRecord("notifications", new Notification
-            {
-                title = "Special Offer 3!!!",
-                description = "20%discount for 12 hours",
-                buttons = { "Take me there" }
-            });
-
-            dbHelper.InsertRecord("notifications", new Notification
-            {
-                title = "Special Offer 4!!!",
-                description = "30%discount for 5 hours",
-                buttons = { "Sounds good", "Maybe later" }
-            });
-
-            dbHelper.InsertRecord("notifications", new Notification
-            {
-                title = "Special Offer 5!!!",
-                description = "40%discount for 8 hours",
-                buttons = { "Take me there" }
-            });
-
-            dbHelper.InsertRecord("notifications", new Notification
-            {
-                title = "Special Offer 6!!!",
-                description = "5%discount for 2 days",
-                buttons = { "Sounds good", "Maybe later" }
-            });
-
-        }
     }
 }
