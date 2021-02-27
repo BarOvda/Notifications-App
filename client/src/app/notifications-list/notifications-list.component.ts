@@ -15,7 +15,7 @@ export class NotificationsListComponent implements OnInit {
   notifications: Notification[] = [];
   page: number = 1;
   totalItems: number;
-  itemsPerPage: number = 5;
+  itemsPerPage: number = 8;
   dtOptions: DataTables.Settings = {};
 
   constructor(public dialog: MatDialog, private service: NotificationsService, private http: HttpClient) { }
