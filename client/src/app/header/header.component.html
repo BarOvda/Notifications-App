@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+
+            <a routerLink="/">
+                <div class="navbar-logo">
+                    <img src="../../assets/notification-circle-blue-512.webp"
+                        width="45" height="45" alt="logo">
+                </div>
+            </a>
+        </div>
+        <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true"
+            *ngIf="!getLoggedUser();else elseBlock">
+            <ul class="nav navbar-nav navbar-right">
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li routerLinkActive="class1"><a routerLink="/login">Log-In</a></li>
+                </ul>
+
+            </ul>
+        </div>
+        <ng-template #elseBlock>
+            <div>
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a routerLink="/notifications">Notifications</a></li>
+
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="user">
+                    <p>HI, {{email}}</p>
+                </li>
+                <li><a (click)="logOut()" href="#">Log Out</a></li>
+
+            </ul>
+        </ng-template>
+
+    </div>
+</nav>

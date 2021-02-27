@@ -1,0 +1,37 @@
+<form [formGroup]="notificationForm" #formDirective="ngForm" (ngSubmit)="onSubmit()">
+
+
+    <mat-dialog-content class="mat-typography notf-dialog">
+
+        <h2 mat-dialog-title>{{title}}</h2>
+
+        <mat-form-field>
+            <input matInput placeholder="Title" formControlName="title">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Description" formControlName="description">
+        </mat-form-field>
+
+        <div formArrayName="buttons">
+
+            <h3>Buttons</h3> <button type="button" [disabled]="isMaxButtons()" mat-button
+                class="mat-raised-button mat-primary" (click)="addButtons()">Add</button>
+
+            <button type="button" [disabled]="isMinButtons()" mat-button class="mat-raised-button mat-dialog-close"
+                (click)="removeButtons()">Remove</button>
+
+            <div *ngFor="let button of buttons.controls; let i=index" style="margin-top: 6px;">
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Button {{i+1}}" [formControlName]="i">
+                </mat-form-field>
+
+            </div>
+        </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions class="actions">
+        <button mat-button mat-dialog-close class="mat-raised-button" (click)="close()">Close</button>
+        <button class="mat-raised-button mat-primary" mat-button type="submit" [disabled]="!isFormValid()">Save</button>
+    </mat-dialog-actions>
+</form>

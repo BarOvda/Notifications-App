@@ -1,0 +1,10 @@
+{
+    "EMAIL":"manager@takoomi.com",
+     
+    "PASSWORD":"$2a$12$KX8QkBWcZXtrF9RRx/9G5.dZGG3fwwogiAJMI86uGvK7sM14SGCQK", 
+    "HASH_KEY_CODE":"takoomi-super-secret",
+    "SESSION_EXPIRE_TIME_HOURES":24,
+    "SESSION_SECRET":"takoomi-super-secret"
+
+
+}

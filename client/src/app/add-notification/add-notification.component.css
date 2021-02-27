@@ -1,0 +1,10 @@
+.actions{
+    text-align: center;
+    margin-top: 15px;
+}
+.notf-dialog{
+    height: calc(100% - 96px);
+}
+button{
+    margin-left: 5px;
+}

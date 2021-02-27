@@ -1,0 +1,50 @@
+
+  input[type=text]:focus {
+    width: 100%;
+  }
+
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+
+  }
+  img{
+      margin-top:10px ;
+  }
+.navbar-logo{
+  size: 3px;
+  padding-top: 3px;
+}
+  .dropdown-item{
+    padding-left: 7px;
+  }
+  .navbar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    
+    width: 100%;
+    height: 80px;
+    background: rgba(141, 75, 75, 0);
+  }
+
+  ul li {
+    margin-top: 12px;
+  }
+  .user{
+    padding-top: 15px;
+    padding-right: 10px;
+  }
+  p{
+      font-size: medium;
+  }
+  .users-img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+  }
+ .class1{
+    color: black;
+
+ }
+ 
